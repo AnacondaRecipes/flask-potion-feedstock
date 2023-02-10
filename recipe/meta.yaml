@@ -20,11 +20,15 @@ requirements:
     - pip
   run:
     - python
-    - flask >=0.10
+    - flask >=0.10,<2.0
     - jsonschema >=2.4.0
     - aniso8601 >=0.84
     - blinker >=1.3
     - six >=1.8.0
+
+    # needed because flask's pinnings aren't tight enough
+    - jinja2 <=3.0.3
+    - werkzeug <=2.0.2
 
 test:
   imports:
